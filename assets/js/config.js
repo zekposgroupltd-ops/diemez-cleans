@@ -22,16 +22,8 @@ window.DIEMEZ_CONFIG = {
     mapsQuery: "Agudama, close to Law School, Bayelsa State, Nigeria"
   },
 
-  /* Google Apps Script web app URL, e.g.
-     "https://script.google.com/macros/s/AKfycbwD88LQHNM-YfogJ0hX6J-bh8w_l6mfdx-eGxfaC9yaCkSZP6vAJVlDoIERZyDJqDH9/exec" */
-  apiUrl: "},
-
-  /* Google Apps Script web app URL, e.g.
-     "https://script.google.com/macros/s/AKfycbwD88LQHNM-YfogJ0hX6J-bh8w_l6mfdx-eGxfaC9yaCkSZP6vAJVlDoIERZyDJqDH9/exec" */
-  apiUrl: "",
-
-  /* Shown on bookings + account pages */
-  bank: {",
+  /* Google Apps Script web app URL (must end in /exec) */
+  apiUrl: "https://script.google.com/macros/s/AKfycbwD88LQHNM-YfogJ0hX6J-bh8w_l6mfdx-eGxfaC9yaCkSZP6vAJVlDoIERZyDJqDH9/exec",
 
   /* Shown on bookings + account pages */
   bank: {
