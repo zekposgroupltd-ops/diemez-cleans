@@ -2,7 +2,7 @@
    Caches the app shell so the site opens and installs like an app.
    Customer records and API responses are never cached. */
 
-const CACHE = "diemez-shell-v3";
+const CACHE = "diemez-shell-v4";
 
 const SHELL = [
   "./",
