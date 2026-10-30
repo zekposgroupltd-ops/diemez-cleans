@@ -24,7 +24,14 @@ window.DIEMEZ_CONFIG = {
 
   /* Google Apps Script web app URL, e.g.
      "https://script.google.com/macros/s/AKfycbwD88LQHNM-YfogJ0hX6J-bh8w_l6mfdx-eGxfaC9yaCkSZP6vAJVlDoIERZyDJqDH9/exec" */
+  apiUrl: "},
+
+  /* Google Apps Script web app URL, e.g.
+     "https://script.google.com/macros/s/AKfycbwD88LQHNM-YfogJ0hX6J-bh8w_l6mfdx-eGxfaC9yaCkSZP6vAJVlDoIERZyDJqDH9/exec" */
   apiUrl: "",
+
+  /* Shown on bookings + account pages */
+  bank: {",
 
   /* Shown on bookings + account pages */
   bank: {
