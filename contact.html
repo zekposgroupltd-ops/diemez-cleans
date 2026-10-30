@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact — DIEMEZ CLEANS</title>
+<meta name="description" content="Contact DIEMEZ CLEANS in Agudama, Bayelsa State. Call, WhatsApp or send a message about laundry, cleaning or painting.">
+<meta name="theme-color" content="#102A43">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="contact">
+<div id="site-header"></div>
+<main>
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Contact</span>
+      <h1>Talk to DIEMEZ CLEANS</h1>
+      <p>Call, message us on WhatsApp, or send a note below. We're available Monday to Saturday, 8:00 AM – 6:00 PM.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="wizard">
+        <div>
+          <div id="contactDone" class="hidden"></div>
+          <form id="contactForm" class="panel" novalidate>
+            <div class="panel-head"><h3>Send us a message</h3></div>
+            <div class="form-grid">
+              <div class="field"><label class="label" for="c-name">Full name <span class="req">*</span></label><input class="input" id="c-name" required placeholder="Your name" autocomplete="name"></div>
+              <div class="field"><label class="label" for="c-phone">Phone number <span class="req">*</span></label><input class="input" id="c-phone" required placeholder="e.g. 0812 000 0000" inputmode="tel" autocomplete="tel"></div>
+            </div>
+            <div class="field"><label class="label" for="c-email">Email (optional)</label><input class="input" id="c-email" type="email" placeholder="you@example.com" autocomplete="email"></div>
+            <div class="field">
+              <span class="label">What is this about?</span>
+              <label class="check"><input type="checkbox" name="interest" value="Learn about plans"><span>I'd like to learn about monthly plans</span></label>
+              <label class="check"><input type="checkbox" name="interest" value="Request service"><span>I'd like to request a service</span></label>
+              <label class="check"><input type="checkbox" name="interest" value="Existing order"><span>It's about an existing order</span></label>
+              <label class="check"><input type="checkbox" name="interest" value="Partnership"><span>Partnership or business enquiry</span></label>
+              <label class="check" style="margin-bottom:0"><input type="checkbox" name="interest" value="Other"><span>Something else</span></label>
+            </div>
+            <div class="field"><label class="label" for="c-message">Your message <span class="req">*</span></label><textarea class="textarea" id="c-message" required placeholder="How can we help?"></textarea></div>
+            <div id="contactError"></div>
+            <button class="btn btn-primary btn-block" type="submit" id="contactSubmit">Send message</button>
+          </form>
+        </div>
+
+        <aside class="summary">
+          <div class="panel">
+            <h3 style="margin-bottom:14px">Reach us directly</h3>
+            <div class="list-row">
+              <div><small>Phone</small><strong><a href="tel:+2348129511794">0812 951 1794</a></strong></div>
+              <a class="btn btn-outline btn-sm" href="tel:+2348129511794">Call</a>
+            </div>
+            <div class="list-row">
+              <div><small>WhatsApp</small><strong>Enquiries &amp; bookings</strong></div>
+              <a class="btn btn-outline btn-sm" href="https://wa.me/2348129511794" target="_blank" rel="noopener">Chat</a>
+            </div>
+            <div class="list-row">
+              <div><small>Email</small><strong style="font-size:.84rem;word-break:break-all"><a href="mailto:info.diemezcleans@gmail.com">info.diemezcleans@gmail.com</a></strong></div>
+            </div>
+            <div class="list-row">
+              <div><small>Location</small><strong style="font-size:.84rem">Agudama, close to Law School, Bayelsa State</strong></div>
+            </div>
+            <div class="list-row">
+              <div><small>Business hours</small><strong style="font-size:.84rem">Monday – Saturday<br>8:00 AM – 6:00 PM</strong></div>
+            </div>
+            <a class="btn btn-navy btn-block mt-2" href="https://www.google.com/maps/search/?api=1&query=Agudama%2C%20close%20to%20Law%20School%2C%20Bayelsa%20State" target="_blank" rel="noopener">Get directions</a>
+            <p class="form-note">Enquiries received outside business hours are answered the next working day.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/forms.js"></script>
+</body>
+</html>

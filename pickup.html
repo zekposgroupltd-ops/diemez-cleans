@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Pickup — DIEMEZ CLEANS</title>
+<meta name="description" content="Book a laundry pickup with DIEMEZ CLEANS. Choose your items, pick a day and time slot, and we collect from your door.">
+<meta name="theme-color" content="#102A43">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="pickup">
+<div id="site-header"></div>
+<main>
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Book a pickup</span>
+      <h1>Tell us what needs cleaning</h1>
+      <p>Select your items, choose a pickup window and we'll confirm the appointment. Pickup and delivery is included, and you can pay on pickup or by bank transfer.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div id="bookingDone" class="hidden"></div>
+
+      <div class="wizard" id="bookingWizard">
+        <form id="bookingForm" novalidate>
+          <div class="panel">
+            <div class="panel-head"><h3>1 · Your items</h3><span class="badge badge--blue" id="itemCount">0 items</span></div>
+            <p class="muted text-sm" style="margin-top:-6px">Open a category and enter how many of each item you're sending.</p>
+            <div id="itemGroups" class="mt-2"></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><h3>2 · Pickup details</h3></div>
+            <div class="form-grid">
+              <div class="field"><label class="label" for="b-name">Full name <span class="req">*</span></label><input class="input" id="b-name" required placeholder="Your name" autocomplete="name"></div>
+              <div class="field"><label class="label" for="b-phone">Phone number <span class="req">*</span></label><input class="input" id="b-phone" required placeholder="e.g. 0812 000 0000" inputmode="tel" autocomplete="tel"></div>
+              <div class="field"><label class="label" for="b-date">Pickup date <span class="req">*</span></label><input class="input" id="b-date" type="date" required></div>
+              <div class="field"><label class="label" for="b-slot">Time slot <span class="req">*</span></label><select class="select" id="b-slot" required></select></div>
+            </div>
+            <div class="field"><label class="label" for="b-area">Area <span class="req">*</span></label><select class="select" id="b-area" required></select></div>
+            <div class="field"><label class="label" for="b-address">Pickup address <span class="req">*</span></label><textarea class="textarea" id="b-address" required placeholder="Street, house number, landmark" autocomplete="street-address"></textarea></div>
+            <div class="field" style="margin-bottom:0"><label class="label" for="b-notes">Notes for our team (optional)</label><textarea class="textarea" id="b-notes" placeholder="Gate code, special instructions, delicate items"></textarea></div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head"><h3>3 · Payment</h3></div>
+            <label class="check"><input type="radio" name="pay" value="Pay on pickup" checked><span><strong>Pay on pickup</strong><br><span class="muted text-sm">Pay our team when we collect your items.</span></span></label>
+            <label class="check"><input type="radio" name="pay" value="Bank transfer"><span><strong>Bank transfer</strong><br><span class="muted text-sm">We'll send account details with your confirmation.</span></span></label>
+            <div class="alert mt-2" style="margin-bottom:0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+              <span>Your total is an estimate based on the items you enter. Final charges are confirmed when items are counted or weighed at pickup.</span>
+            </div>
+            <div id="bookingError" class="mt-2"></div>
+            <button class="btn btn-primary btn-block mt-2" type="submit" id="bookingSubmit">Confirm booking request</button>
+            <p class="form-note center">By submitting you agree to our <a href="terms.html">Terms</a> and <a href="refund.html">cancellation policy</a>.</p>
+          </div>
+        </form>
+
+        <aside class="summary">
+          <div class="panel">
+            <div class="panel-head"><h3>Order summary</h3></div>
+            <div id="summaryLines"><p class="muted text-sm" style="margin:0">No items selected yet.</p></div>
+            <div class="sum-total"><span>Total</span><b id="summaryTotal">₦0</b></div>
+            <p class="form-note" style="margin-top:10px">Pickup and delivery included. Estimate only — confirmed at pickup.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/booking.js"></script>
+</body>
+</html>

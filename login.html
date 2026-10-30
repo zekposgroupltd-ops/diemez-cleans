@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login — DIEMEZ CLEANS</title>
+<meta name="description" content="Sign in to your DIEMEZ CLEANS account to track orders, manage your details and view your laundry plan.">
+<meta name="theme-color" content="#102A43">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="auth-body" data-page="login">
+<div class="auth-page">
+  <a class="auth-logo" href="index.html" aria-label="DIEMEZ CLEANS home"><img class="auth-logo-img" src="icons/logo-animated.svg" alt="DIEMEZ CLEANS" width="250" height="52"></a>
+  <div class="auth-card auth-card--narrow">
+    <button type="button" class="auth-back" onclick="history.length>1?history.back():location.href='index.html'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg> Back</button>
+    <h1>Welcome Back</h1>
+    <p class="sub">Sign in to your account to continue</p>
+    <form id="loginForm" novalidate>
+      <div class="field"><label class="label" for="l-id">Enter your phone number</label>
+        <input class="input" id="l-id" placeholder="e.g. 081 XXX XX XXXX" autocomplete="username" inputmode="tel" required></div>
+      <div class="field"><label class="label" for="l-pass">Password</label>
+        <div style="position:relative"><input class="input" id="l-pass" type="password" placeholder="Your password" autocomplete="current-password" required style="padding-right:52px">
+        <button type="button" class="eye" id="togglePass" aria-label="Show or hide password"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+        <p class="form-note" style="text-align:right;margin-top:8px">Forgot password? <a href="https://wa.me/2348129511794?text=Hello%20DIEMEZ%20CLEANS%2C%20please%20help%20me%20reset%20my%20password." target="_blank" rel="noopener">Message us to reset it</a></p></div>
+      <div id="loginError"></div>
+      <button class="btn btn-navy btn-block" type="submit" id="loginSubmit">Login</button>
+    </form>
+    <p class="auth-alt">Don’t have an account yet? <a href="register.html">Create an Account</a></p>
+    <p class="auth-alt" style="margin-top:8px">Not ready to login? <a href="#" data-open-msg>Leave us a message</a></p>
+    <p class="auth-alt" style="margin-top:8px"><a href="pickup.html">Book a pickup as a guest</a></p>
+  </div>
+</div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>

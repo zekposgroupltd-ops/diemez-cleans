@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Account — DIEMEZ CLEANS</title>
+<meta name="description" content="Your DIEMEZ CLEANS account: orders, plan, addresses and profile.">
+<meta name="theme-color" content="#102A43">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="account">
+<div id="site-header"></div>
+<main>
+  <div class="odash">
+    <aside class="oside">
+      <nav class="onav" id="acc-nav" aria-label="Account"><button data-tab="home" class="active"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5V21H3z"/><path d="M9 21v-6h6v6"/></svg>Home</button><button data-tab="orders"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Orders</button><button data-tab="plan"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l4 4 5-7 5 7 4-4v12H3z"/></svg>Subscriptions</button><button data-tab="wallet"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/></svg>Wallet</button><button data-tab="profile"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Profile</button></nav>
+      <div class="oref" id="refBox"></div>
+      <button class="obtn-logout" id="logoutBtn" type="button">Logout</button>
+    </aside>
+    <section class="omain" id="acc-panel" aria-live="polite"></section>
+  </div>
+</main>
+<div class="modal-back" id="fundModal">
+  <div class="modal" style="max-width:440px">
+    <div class="modal-head"><div><h3>Fund Wallet</h3><p class="muted text-sm" style="margin:0">Enter the amount you want to add to your wallet</p></div>
+      <button class="modal-x" data-close-modal aria-label="Close">✕</button></div>
+    <div class="field mt-2"><label class="label" for="fundAmt">Amount</label><input class="input" id="fundAmt" inputmode="numeric" placeholder="₦ 1,000" disabled></div>
+    <div class="alert alert--error" style="background:var(--amber-soft);color:#8A4A06;border-color:#F3D3A8"><span>Wallet top-ups are not switched on yet. Until online payments are connected, please pay on pickup or by bank transfer — your wallet balance can only ever be changed after a payment is verified by our server.</span></div>
+    <div class="btn-row" style="justify-content:flex-end;margin-top:14px"><button class="btn btn-ghost" data-close-modal>Close</button><button class="btn btn-navy" disabled>Continue</button></div>
+  </div>
+</div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/account.js"></script>
+</body>
+</html>

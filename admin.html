@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Dashboard — DIEMEZ CLEANS</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#102A43">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="admin">
+<div id="site-header"></div>
+<main>
+  <div class="container">
+    <div class="dash">
+      <aside class="dash-side">
+        <div class="dash-user">
+          <div class="avatar" id="adm-avatar">DC</div>
+          <div><strong id="adm-name">Loading…</strong><span>Administrator</span></div>
+        </div>
+        <nav class="dash-nav" id="adm-nav">
+          <button data-tab="overview" class="active">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            Overview
+          </button>
+          <button data-tab="orders">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            Orders
+          </button>
+          <button data-tab="quotes">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l4 4v14H5V3z"/><path d="M9 12h6M9 16h4"/></svg>
+            Quotes
+          </button>
+          <button data-tab="subs">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l4 4 5-7 5 7 4-4v12H3z"/></svg>
+            Subscriptions
+          </button>
+          <button data-tab="messages">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-8 8H8l-5 3 1.5-5A8 8 0 1 1 21 12z"/></svg>
+            Messages
+          </button>
+          <button data-tab="customers">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            Customers
+          </button>
+          <button data-tab="prices">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 6.5c0-2-2.2-3-5-3s-5 1-5 3 2.2 2.8 5 3.3 5 1.3 5 3.2-2.2 3-5 3-5-1-5-3"/></svg>
+            Price list
+          </button>
+        </nav>
+        <div class="dash-logout">
+          <button class="btn btn-ghost btn-block btn-sm" id="admLogout" style="color:var(--error)">Log out</button>
+        </div>
+      </aside>
+
+      <section class="dash-main" id="adm-panel"></section>
+    </div>
+  </div>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

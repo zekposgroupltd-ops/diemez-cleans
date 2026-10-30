@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Create an Account — DIEMEZ CLEANS</title>
+<meta name="description" content="Create a DIEMEZ CLEANS account to book pickups, track orders and manage your laundry plan.">
+<meta name="theme-color" content="#102A43">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="auth-body" data-page="register">
+<div class="auth-page">
+  <a class="auth-logo" href="index.html" aria-label="DIEMEZ CLEANS home"><img class="auth-logo-img" src="icons/logo-animated.svg" alt="DIEMEZ CLEANS" width="250" height="52"></a>
+  <div class="auth-card">
+    <button type="button" class="auth-back" onclick="history.length>1?history.back():location.href='index.html'"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg> Back</button>
+    <h1>Create an account</h1>
+    <p class="sub">Create an account to start booking pickups, managing subscriptions and earning rewards.</p>
+    <div class="auth-note">Pickup and delivery covers Agudama, Yenagoa and nearby areas in Bayelsa State. Not sure about your area? <a href="#" data-open-msg>Message us</a> before booking.</div>
+    <form id="registerForm" novalidate>
+      <div class="form-grid">
+        <div class="field"><label class="label" for="r-first">First Name</label><input class="input" id="r-first" placeholder="Enter first name" autocomplete="given-name" required></div>
+        <div class="field"><label class="label" for="r-last">Last Name</label><input class="input" id="r-last" placeholder="Enter last name" autocomplete="family-name" required></div>
+      </div>
+      <div class="field"><label class="label" for="r-phone">Phone Number</label><input class="input" id="r-phone" placeholder="e.g. 081 XXX XX XXXX" inputmode="tel" autocomplete="tel" required></div>
+      <div class="field"><label class="label" for="r-email">Email Address <span class="opt">(Optional)</span></label><input class="input" id="r-email" type="email" placeholder="you@example.com" autocomplete="email"></div>
+      <div class="field"><label class="label" for="r-pass">Password</label>
+        <div style="position:relative"><input class="input" id="r-pass" type="password" placeholder="At least 8 characters" autocomplete="new-password" required style="padding-right:52px">
+        <button type="button" class="eye" data-eye="r-pass" aria-label="Show or hide password"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></button></div></div>
+      <div class="field"><label class="label" for="r-confirm">Confirm Password</label>
+        <div style="position:relative"><input class="input" id="r-confirm" type="password" placeholder="Re-type password" autocomplete="new-password" required style="padding-right:52px">
+        <button type="button" class="eye" data-eye="r-confirm" aria-label="Show or hide password"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></button></div></div>
+      <div class="field"><label class="label" for="r-address">Address <span class="opt">(Optional)</span></label><input class="input" id="r-address" placeholder="Enter address" autocomplete="street-address"></div>
+      <div class="field"><label class="label" for="r-referral">Referral Code <span class="opt">(Optional)</span></label><input class="input" id="r-referral" placeholder="Enter referral code"></div>
+      <div id="regError"></div>
+      <button class="btn btn-navy btn-block" type="submit" id="regSubmit">Create account</button>
+    </form>
+    <p class="auth-alt">Don’t want to create an account yet? <a href="#" data-open-msg>Leave us a message</a></p>
+    <p class="auth-alt" style="margin-top:8px">Already have an account? <a href="login.html">Login</a></p>
+  </div>
+</div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>

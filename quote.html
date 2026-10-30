@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Request a Quote — DIEMEZ CLEANS</title>
+<meta name="description" content="Request a quotation for painting, interior finishing, commercial cleaning or bulk laundry in Bayelsa State.">
+<meta name="theme-color" content="#102A43">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="quote">
+<div id="site-header"></div>
+<main>
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow">Request a quote</span>
+      <h1>Tell us about the job</h1>
+      <p>Painting, interior finishing, commercial cleaning and bulk laundry are quoted per project. Share a few details and our team will come back to you with a scope and price.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="wizard">
+        <div>
+          <div id="quoteDone" class="hidden"></div>
+          <form id="quoteForm" class="panel" novalidate>
+            <div class="panel-head"><h3>Project details</h3></div>
+            <div class="field">
+              <label class="label" for="q-service">What do you need? <span class="req">*</span></label>
+              <select class="select" id="q-service" required>
+                <option value="Painting">Painting</option>
+                <option value="Interior finishing">Interior finishing</option>
+                <option value="Domestic cleaning">Domestic cleaning</option>
+                <option value="Commercial / industrial cleaning">Commercial / industrial cleaning</option>
+                <option value="Bulk / commercial laundry">Bulk / commercial laundry</option>
+                <option value="Something else">Something else</option>
+              </select>
+            </div>
+            <div class="form-grid">
+              <div class="field"><label class="label" for="q-name">Full name <span class="req">*</span></label><input class="input" id="q-name" required placeholder="Your name" autocomplete="name"></div>
+              <div class="field"><label class="label" for="q-phone">Phone number <span class="req">*</span></label><input class="input" id="q-phone" required placeholder="e.g. 0812 000 0000" inputmode="tel" autocomplete="tel"></div>
+              <div class="field"><label class="label" for="q-email">Email (optional)</label><input class="input" id="q-email" type="email" placeholder="you@example.com" autocomplete="email"></div>
+              <div class="field"><label class="label" for="q-date">Preferred start date</label><input class="input" id="q-date" type="date"></div>
+            </div>
+            <div class="field"><label class="label" for="q-location">Location / address <span class="req">*</span></label><input class="input" id="q-location" required placeholder="Area, town, landmark"></div>
+            <div class="field"><label class="label" for="q-details">Describe the work <span class="req">*</span></label><textarea class="textarea" id="q-details" required placeholder="For painting: number of rooms or building size, interior or exterior. For cleaning: type of space and size. For bulk laundry: approximate weight or item count."></textarea></div>
+            <div id="quoteError"></div>
+            <button class="btn btn-primary btn-block" type="submit" id="quoteSubmit">Send quote request</button>
+            <p class="form-note center">No payment is taken. We'll contact you to confirm details before any work begins.</p>
+          </form>
+        </div>
+
+        <aside class="summary">
+          <div class="panel">
+            <h3 style="margin-bottom:12px">How quoting works</h3>
+            <ul class="tick">
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><span>You send the job details</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><span>We review and may arrange a visit</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><span>You receive a written scope and price</span></li>
+              <li><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><span>Work starts once you approve</span></li>
+            </ul>
+            <div class="divider"></div>
+            <p class="muted text-sm" style="margin-bottom:10px">Prefer to talk it through?</p>
+            <a class="btn btn-outline btn-block" href="tel:+2348129511794">Call 0812 951 1794</a>
+            <a class="btn btn-ghost btn-block" style="margin-top:8px" href="https://wa.me/2348129511794" target="_blank" rel="noopener">Chat on WhatsApp</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/forms.js"></script>
+</body>
+</html>

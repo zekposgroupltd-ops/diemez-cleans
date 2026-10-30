@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Monthly Laundry Plans — DIEMEZ CLEANS</title>
+<meta name="description" content="Monthly laundry plans with set item allowances, free pickup and delivery, and rollover of unused items.">
+<meta name="theme-color" content="#102A43">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" href="icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body data-page="plans">
+<div id="site-header"></div>
+<main>
+  <section class="page-head">
+    <div class="container">
+      <span class="eyebrow eyebrow--amber">Monthly plans</span>
+      <h1>Laundry subscription plans</h1>
+      <p>A fixed monthly price for professionally handled laundry — washing, ironing and dry cleaning with free pickup and doorstep delivery. When you renew before your plan expires, unused counts roll over.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3 plans-grid" id="plans-grid"></div>
+      <div class="rollover"><span class="rollover-tag">New</span><div><h3>Unused counts don’t expire — they roll over</h3><p>Away for two weeks? Renew the same plan before your current subscription expires, and every unused wash, iron and dry-cleaning count moves into your next subscription automatically.</p></div></div>
+      <p class="muted text-sm mt-3 center">Plan prices are billed monthly. Item allowances are counted per plan period and roll over as described on each plan.</p>
+    </div>
+  </section>
+
+  <section class="section section--mist">
+    <div class="container">
+      <div class="section-head"><h2>How a plan works</h2></div>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><h4>Choose a plan</h4><p>Pick the allowance that matches your household or business.</p></div>
+        <div class="step"><div class="step-num">2</div><h4>We activate it</h4><p>Our team confirms the plan, its price and your first pickup.</p></div>
+        <div class="step"><div class="step-num">3</div><h4>Send your items</h4><p>Book a pickup whenever you're ready — items are deducted from your allowance.</p></div>
+        <div class="step"><div class="step-num">4</div><h4>Renew or adjust</h4><p>Renew monthly, or move to a different plan as your needs change.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:860px">
+      <div class="section-head"><h2>Plan questions</h2></div>
+      <details class="acc"><summary>Do unused items really roll over?</summary><div class="acc-body">Yes. Item counts you don't use in a plan period carry into the next period, so a quiet month doesn't cost you. Allowances do not roll over indefinitely — our team will confirm the current carry-over period when your plan is activated.</div></details>
+      <details class="acc"><summary>Is pickup and delivery included?</summary><div class="acc-body">Every plan includes free pickup and delivery for the laundry requests it covers (2 to 4 a month, depending on the plan). Requests beyond that may attract a pickup fee, which we confirm before collecting.</div></details>
+      <details class="acc"><summary>What counts as a clothing item?</summary><div class="acc-body">Each garment counts as one item, and each plan only covers the categories listed on its card. Items outside your plan’s categories are charged at the price-list rate.</div></details>
+      <details class="acc"><summary>Can I move to another plan later?</summary><div class="acc-body">Yes. You can move up or down at renewal. Our team will confirm the effective date so your allowance is adjusted fairly.</div></details>
+      <details class="acc"><summary>Are dry cleaning and express service included?</summary><div class="acc-body">Dry-cleaning counts are included from Standard upward, and express / semi-express uses are included from Standard upward, as shown on each plan. Anything beyond your plan allowance is charged at the published price-list rates, and we confirm before proceeding.</div></details>
+    </div>
+  </section>
+
+  <section class="section section--navy">
+    <div class="container center">
+      <h2 style="margin-bottom:12px">Prefer to pay as you go?</h2>
+      <p style="max-width:50ch;margin:0 auto 24px;color:#B9CBDB">No plan needed. Book a pickup and pay per item at our published rates.</p>
+      <a class="btn btn-primary" href="pickup.html">Book a pickup</a>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+
+<div class="modal-back" id="planModal">
+  <div class="modal">
+    <div class="modal-head">
+      <div><h3 id="planModalTitle">Request a plan</h3><p class="muted text-sm" style="margin:0">We'll confirm your plan and first pickup.</p></div>
+      <button class="modal-x" data-close-modal aria-label="Close">✕</button>
+    </div>
+    <form id="planForm" class="mt-2" novalidate>
+      <div class="form-grid">
+        <div class="field"><label class="label" for="pf-name">Full name <span class="req">*</span></label><input class="input" id="pf-name" required placeholder="Your name"></div>
+        <div class="field"><label class="label" for="pf-phone">Phone number <span class="req">*</span></label><input class="input" id="pf-phone" required placeholder="e.g. 0812 000 0000" inputmode="tel"></div>
+      </div>
+      <div class="field"><label class="label" for="pf-address">Pickup address <span class="req">*</span></label><input class="input" id="pf-address" required placeholder="Street, area, town"></div>
+      <div class="field"><label class="label" for="pf-notes">Anything else? (optional)</label><textarea class="textarea" id="pf-notes" placeholder="Household size, preferred pickup days, questions"></textarea></div>
+      <div id="planError"></div>
+      <button class="btn btn-navy btn-block" type="submit" id="planSubmit">Request this plan</button>
+      <p class="form-note center">Submitting a request does not take payment. Our team confirms pricing and activation first.</p>
+    </form>
+  </div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/api.js"></script>
+<script src="assets/js/layout.js"></script>
+<script src="assets/js/catalogue.js"></script>
+<script src="assets/js/forms.js"></script>
+</body>
+</html>
